@@ -1,0 +1,744 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="en">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Why Be A King When You Can Be A God ?" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="题目就是题解。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="[ZJOI 2008] 杀蚂蚁">
+<meta property="og:url" content="http://stdafx.ga/2015/10/01/ZJOI-2008-杀蚂蚁/index.html">
+<meta property="og:site_name" content="stdafx's Blog">
+<meta property="og:description" content="题目就是题解。">
+<meta property="og:updated_time" content="2016-07-20T09:01:34.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="[ZJOI 2008] 杀蚂蚁">
+<meta name="twitter:description" content="题目就是题解。">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: 'stdafx'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://stdafx.ga/2015/10/01/ZJOI-2008-杀蚂蚁/"/>
+
+
+
+
+
+  <title> [ZJOI 2008] 杀蚂蚁 | stdafx's Blog </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?9c616d8a49183f1ab5abf3385d00a440";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">stdafx's Blog</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">Welcome</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            About
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://stdafx.ga/2015/10/01/ZJOI-2008-杀蚂蚁/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="stdafx">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/images/avatar.jpg">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="stdafx's Blog">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="stdafx's Blog" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                [ZJOI 2008] 杀蚂蚁
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2015-10-01T10:43:16+08:00">
+                2015-10-01
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/题目/" itemprop="url" rel="index">
+                    <span itemprop="name">题目</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <a href="/2015/10/01/ZJOI-2008-杀蚂蚁/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/10/01/ZJOI-2008-杀蚂蚁/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>题目就是题解。</p>
+<a id="more"></a>
+<p>其实这题细节很多的，里面有<strong>计算几何</strong>，我直接列成方程了。</p>
+<p>秀一下Code:</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div><div class="line">139</div><div class="line">140</div><div class="line">141</div><div class="line">142</div><div class="line">143</div><div class="line">144</div><div class="line">145</div><div class="line">146</div><div class="line">147</div><div class="line">148</div><div class="line">149</div><div class="line">150</div><div class="line">151</div><div class="line">152</div><div class="line">153</div><div class="line">154</div><div class="line">155</div><div class="line">156</div><div class="line">157</div><div class="line">158</div><div class="line">159</div><div class="line">160</div><div class="line">161</div><div class="line">162</div><div class="line">163</div><div class="line">164</div><div class="line">165</div><div class="line">166</div><div class="line">167</div><div class="line">168</div><div class="line">169</div><div class="line">170</div><div class="line">171</div><div class="line">172</div><div class="line">173</div><div class="line">174</div><div class="line">175</div><div class="line">176</div><div class="line">177</div><div class="line">178</div><div class="line">179</div><div class="line">180</div><div class="line">181</div><div class="line">182</div><div class="line">183</div><div class="line">184</div><div class="line">185</div><div class="line">186</div><div class="line">187</div><div class="line">188</div><div class="line">189</div><div class="line">190</div><div class="line">191</div><div class="line">192</div><div class="line">193</div><div class="line">194</div><div class="line">195</div><div class="line">196</div><div class="line">197</div><div class="line">198</div><div class="line">199</div><div class="line">200</div><div class="line">201</div><div class="line">202</div><div class="line">203</div><div class="line">204</div><div class="line">205</div><div class="line">206</div><div class="line">207</div><div class="line">208</div><div class="line">209</div><div class="line">210</div><div class="line">211</div><div class="line">212</div><div class="line">213</div><div class="line">214</div><div class="line">215</div><div class="line">216</div><div class="line">217</div><div class="line">218</div><div class="line">219</div><div class="line">220</div><div class="line">221</div><div class="line">222</div><div class="line">223</div><div class="line">224</div><div class="line">225</div><div class="line">226</div><div class="line">227</div><div class="line">228</div><div class="line">229</div><div class="line">230</div><div class="line">231</div><div class="line">232</div><div class="line">233</div><div class="line">234</div><div class="line">235</div><div class="line">236</div><div class="line">237</div><div class="line">238</div><div class="line">239</div><div class="line">240</div><div class="line">241</div><div class="line">242</div><div class="line">243</div><div class="line">244</div><div class="line">245</div><div class="line">246</div><div class="line">247</div><div class="line">248</div><div class="line">249</div><div class="line">250</div><div class="line">251</div><div class="line">252</div><div class="line">253</div><div class="line">254</div><div class="line">255</div><div class="line">256</div><div class="line">257</div><div class="line">258</div><div class="line">259</div><div class="line">260</div><div class="line">261</div><div class="line">262</div><div class="line">263</div><div class="line">264</div><div class="line">265</div><div class="line">266</div><div class="line">267</div><div class="line">268</div><div class="line">269</div><div class="line">270</div><div class="line">271</div><div class="line">272</div><div class="line">273</div><div class="line">274</div><div class="line">275</div><div class="line">276</div><div class="line">277</div><div class="line">278</div><div class="line">279</div><div class="line">280</div><div class="line">281</div><div class="line">282</div><div class="line">283</div><div class="line">284</div><div class="line">285</div><div class="line">286</div><div class="line">287</div><div class="line">288</div><div class="line">289</div><div class="line">290</div><div class="line">291</div><div class="line">292</div><div class="line">293</div><div class="line">294</div><div class="line">295</div><div class="line">296</div><div class="line">297</div><div class="line">298</div><div class="line">299</div><div class="line">300</div><div class="line">301</div><div class="line">302</div><div class="line">303</div><div class="line">304</div><div class="line">305</div><div class="line">306</div><div class="line">307</div><div class="line">308</div><div class="line">309</div><div class="line">310</div><div class="line">311</div><div class="line">312</div><div class="line">313</div><div class="line">314</div><div class="line">315</div><div class="line">316</div><div class="line">317</div><div class="line">318</div><div class="line">319</div><div class="line">320</div><div class="line">321</div><div class="line">322</div><div class="line">323</div><div class="line">324</div><div class="line">325</div><div class="line">326</div><div class="line">327</div><div class="line">328</div><div class="line">329</div><div class="line">330</div><div class="line">331</div><div class="line">332</div><div class="line">333</div><div class="line">334</div><div class="line">335</div><div class="line">336</div><div class="line">337</div><div class="line">338</div><div class="line">339</div><div class="line">340</div><div class="line">341</div><div class="line">342</div><div class="line">343</div><div class="line">344</div><div class="line">345</div><div class="line">346</div><div class="line">347</div><div class="line">348</div><div class="line">349</div><div class="line">350</div><div class="line">351</div><div class="line">352</div><div class="line">353</div><div class="line">354</div><div class="line">355</div><div class="line">356</div><div class="line">357</div><div class="line">358</div><div class="line">359</div><div class="line">360</div><div class="line">361</div><div class="line">362</div><div class="line">363</div><div class="line">364</div><div class="line">365</div><div class="line">366</div><div class="line">367</div><div class="line">368</div><div class="line">369</div><div class="line">370</div><div class="line">371</div><div class="line">372</div><div class="line">373</div><div class="line">374</div><div class="line">375</div><div class="line">376</div><div class="line">377</div><div class="line">378</div><div class="line">379</div><div class="line">380</div><div class="line">381</div><div class="line">382</div><div class="line">383</div><div class="line">384</div><div class="line">385</div><div class="line">386</div><div class="line">387</div><div class="line">388</div><div class="line">389</div><div class="line">390</div><div class="line">391</div><div class="line">392</div><div class="line">393</div><div class="line">394</div><div class="line">395</div><div class="line">396</div><div class="line">397</div><div class="line">398</div><div class="line">399</div><div class="line">400</div><div class="line">401</div><div class="line">402</div><div class="line">403</div><div class="line">404</div><div class="line">405</div><div class="line">406</div><div class="line">407</div><div class="line">408</div><div class="line">409</div><div class="line">410</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**************************************************************</span></div><div class="line">    Problem: 1033</div><div class="line">    User: stdafx</div><div class="line">    Language: C++</div><div class="line">    Result: Accepted</div><div class="line">    Time:484 ms</div><div class="line">    Memory:824 kb</div><div class="line">****************************************************************/</div><div class="line"> </div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> MAXN 9UL</span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> MAXC 21UL</span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> MAXA 10UL</span></div><div class="line"> </div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> ANT_LIMIT 6L</span></div><div class="line"> </div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> CANTMOVE -1</span></div><div class="line"> </div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> D(x) ((float)(x))</span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> INT(x) ((int)(x))</span></div><div class="line"> </div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> eps 1e-2</span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> INF 0x3fffffff</span></div><div class="line"> </div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> BLOODBASE 1.1</span></div><div class="line"> </div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> GAMEOVER <span class="meta-string">"Game over after %d seconds\n"</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> GAMING <span class="meta-string">"The game is going on\n"</span></span></div><div class="line"> </div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cmath&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdlib&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;vector&gt;</span></span></div><div class="line"> </div><div class="line"><span class="keyword">int</span> n,m,s,d,r,t,lose_time,ant_id;</div><div class="line"> </div><div class="line"><span class="keyword">int</span> opx[<span class="number">5</span>]=&#123;<span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>, <span class="number">0</span>,<span class="number">-1</span>&#125;;</div><div class="line"><span class="keyword">int</span> opy[<span class="number">5</span>]=&#123;<span class="number">0</span>,<span class="number">1</span>,<span class="number">0</span>,<span class="number">-1</span>, <span class="number">0</span>&#125;;</div><div class="line"> </div><div class="line"><span class="keyword">bool</span> loser_flag=<span class="literal">false</span>,lose_cake=<span class="literal">false</span>;</div><div class="line"> </div><div class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">int</span> <span class="title">Cal_Level</span><span class="params">()</span></span>&#123;</div><div class="line">    <span class="keyword">return</span> ant_id%ANT_LIMIT==<span class="number">0</span>?(ant_id/ANT_LIMIT):((ant_id/ANT_LIMIT)+<span class="number">1</span>);</div><div class="line">&#125;</div><div class="line"> </div><div class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">float</span> <span class="title">Pow</span><span class="params">(<span class="keyword">float</span> base,<span class="keyword">int</span> k)</span></span>&#123;</div><div class="line">    <span class="keyword">float</span> Ans=<span class="number">1.0</span>;</div><div class="line">    <span class="keyword">while</span>(k)&#123;</div><div class="line">        <span class="keyword">if</span>(k&amp;<span class="number">1</span>) Ans*=base;</div><div class="line">        k&gt;&gt;=<span class="number">1</span>;base*=base;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> Ans;</div><div class="line">&#125;</div><div class="line"> </div><div class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">int</span> <span class="title">Cal_Blood</span><span class="params">(<span class="keyword">int</span> level)</span></span>&#123;</div><div class="line">    <span class="keyword">return</span> INT(<span class="number">4.0</span>*Pow(BLOODBASE,level));</div><div class="line">&#125;</div><div class="line"> </div><div class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">int</span> <span class="title">MIN</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b)</span></span>&#123;</div><div class="line">    <span class="keyword">return</span> a&lt;b?a:b;</div><div class="line">&#125;</div><div class="line"> </div><div class="line"><span class="keyword">struct</span> Map_Def&#123;</div><div class="line">    <span class="keyword">int</span> info;</div><div class="line">    <span class="keyword">bool</span> having_sth;</div><div class="line">    <span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">On</span><span class="params">()</span></span>&#123;</div><div class="line">        having_sth=<span class="literal">true</span>;</div><div class="line">        <span class="keyword">return</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">Off</span><span class="params">()</span></span>&#123;</div><div class="line">        having_sth=<span class="literal">false</span>;</div><div class="line">        <span class="keyword">return</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">Update</span><span class="params">(<span class="keyword">int</span> p)</span></span>&#123;</div><div class="line">        info+=p;</div><div class="line">        <span class="keyword">return</span>;</div><div class="line">    &#125;</div><div class="line">&#125;;</div><div class="line"> </div><div class="line">Map_Def Map[MAXN][MAXN];</div><div class="line"> </div><div class="line"><span class="keyword">struct</span> Ant_Def&#123;</div><div class="line">    <span class="keyword">int</span> blood,age,level,x,y,born_blood,last_x,last_y;</div><div class="line">    <span class="keyword">bool</span> have_cake;</div><div class="line">    <span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">Prx</span><span class="params">()</span></span>&#123;</div><div class="line">        <span class="built_in">printf</span>(<span class="string">"%d %d %d %d %d\n"</span>,age,level,blood,x,y);</div><div class="line">        <span class="keyword">return</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="function"><span class="keyword">inline</span> <span class="keyword">bool</span> <span class="title">Ant_Win</span><span class="params">()</span></span>&#123;</div><div class="line">        <span class="keyword">return</span> have_cake&amp;&amp;x==<span class="number">0</span>&amp;&amp;y==<span class="number">0</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">Preset</span><span class="params">()</span></span>&#123;</div><div class="line">        have_cake=<span class="literal">false</span>;</div><div class="line">        age=<span class="number">0</span>;x=<span class="number">0</span>;y=<span class="number">0</span>;</div><div class="line">        last_x=last_y=CANTMOVE;</div><div class="line">        level=Cal_Level();</div><div class="line">        born_blood=blood=Cal_Blood(level);</div><div class="line">        Map[<span class="number">0</span>][<span class="number">0</span>].On();</div><div class="line">        <span class="keyword">return</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="function"><span class="keyword">inline</span> <span class="keyword">bool</span> <span class="title">Death</span><span class="params">()</span></span>&#123;</div><div class="line">        <span class="keyword">return</span> blood&lt;<span class="number">0</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="function"><span class="keyword">inline</span> <span class="keyword">bool</span> <span class="title">Have_Cake</span><span class="params">()</span></span>&#123;</div><div class="line">        <span class="keyword">return</span> have_cake;</div><div class="line">    &#125;</div><div class="line">    <span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">Grow</span><span class="params">()</span></span>&#123;</div><div class="line">        age++;</div><div class="line">        <span class="keyword">return</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">Injury</span><span class="params">()</span></span>&#123;</div><div class="line">        blood-=d;</div><div class="line">        <span class="keyword">return</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="function"><span class="keyword">inline</span> <span class="keyword">float</span> <span class="title">CalK</span><span class="params">(<span class="keyword">int</span> px,<span class="keyword">int</span> py)</span></span>&#123;</div><div class="line">        <span class="keyword">return</span> D(y-py)/D(x-px);</div><div class="line">    &#125;</div><div class="line">    <span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">Info</span><span class="params">()</span></span>&#123;</div><div class="line">        <span class="keyword">if</span>(have_cake) Map[x][y].Update(<span class="number">5</span>);</div><div class="line">        <span class="keyword">else</span> Map[x][y].Update(<span class="number">2</span>);</div><div class="line">        <span class="keyword">return</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="function"><span class="keyword">inline</span> <span class="keyword">bool</span> <span class="title">CheckAble</span><span class="params">(<span class="keyword">float</span> fx,<span class="keyword">float</span> fy,<span class="keyword">int</span> min_x,<span class="keyword">int</span> max_x,<span class="keyword">int</span> min_y,<span class="keyword">int</span> max_y)</span></span>&#123;</div><div class="line">        <span class="keyword">if</span>(fx&lt;min_x||fx&gt;max_x) <span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line">        <span class="keyword">if</span>(fy&lt;min_y||fy&gt;max_y) <span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line">        <span class="keyword">return</span> <span class="literal">true</span>; </div><div class="line">    &#125;</div><div class="line">    <span class="function"><span class="keyword">inline</span> <span class="keyword">bool</span> <span class="title">SimpleJudge</span><span class="params">(<span class="keyword">int</span> min_x,<span class="keyword">int</span> max_x,<span class="keyword">int</span> min_y,<span class="keyword">int</span> max_y)</span></span>&#123;</div><div class="line">        <span class="keyword">if</span>(min_x==max_x) <span class="keyword">return</span> x==min_x&amp;&amp;y&gt;=min_y&amp;&amp;y&lt;=max_y;</div><div class="line">        <span class="keyword">if</span>(min_y==max_y) <span class="keyword">return</span> y==min_y&amp;&amp;x&gt;=min_x&amp;&amp;x&lt;=max_x;</div><div class="line">    &#125;</div><div class="line">    <span class="function"><span class="keyword">inline</span> <span class="keyword">bool</span> <span class="title">FlexJudge</span><span class="params">(<span class="keyword">int</span> min_x,<span class="keyword">int</span> max_x,<span class="keyword">int</span> min_y,<span class="keyword">int</span> max_y,<span class="keyword">float</span> K,<span class="keyword">float</span> B)</span></span>&#123;</div><div class="line">        <span class="comment">// eq1 -&gt; (X-x)^2 + (Y-y)^2=0.25</span></div><div class="line">        <span class="comment">// eq2 -&gt; Y=KX+B</span></div><div class="line">        <span class="comment">// eq3 -&gt; X&gt;=min_x &amp;&amp; X&lt;=max_x &amp;&amp; Y&gt;=min_y &amp;&amp; Y&lt;=max_y</span></div><div class="line">        <span class="keyword">float</span> E=x,F=y;</div><div class="line">        <span class="keyword">float</span> a=<span class="number">1</span>+K*K,b=<span class="number">-2.0</span>*E+<span class="number">2.0</span>*K*B<span class="number">-2.0</span>*K*F,c=E*E+B*B<span class="number">-2.0</span>*B*F+F*F<span class="number">-0.25</span>;</div><div class="line">        <span class="keyword">float</span> temp=b*b<span class="number">-4.0</span>*a*c;</div><div class="line">        <span class="keyword">if</span>(temp&lt;<span class="number">0.0</span>) <span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line">        temp=<span class="built_in">sqrt</span>(temp);</div><div class="line">        <span class="keyword">float</span> x1=(-b+temp)/(<span class="number">2.0</span>*a),x2=(-b-temp)/(<span class="number">2.0</span>*a);</div><div class="line">        <span class="keyword">return</span> CheckAble(x1,K*x1+B,min_x,max_x,min_y,max_y)||CheckAble(x2,K*x2+B,min_x,max_x,min_y,max_y);</div><div class="line">    &#125;</div><div class="line">    <span class="function"><span class="keyword">inline</span> <span class="keyword">bool</span> <span class="title">CanMove</span><span class="params">(<span class="keyword">int</span> der)</span></span>&#123;</div><div class="line">        <span class="keyword">int</span> new_x=x+opx[der],new_y=y+opy[der];</div><div class="line">        <span class="keyword">return</span> ((new_x!=last_x)||(new_y!=last_y))&amp;&amp;new_x&gt;=<span class="number">0</span>&amp;&amp;new_x&lt;=n&amp;&amp;new_y&gt;=<span class="number">0</span>&amp;&amp;new_y&lt;=m&amp;&amp;(!Map[new_x][new_y].having_sth);</div><div class="line">    &#125;</div><div class="line">    <span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">CheckCake</span><span class="params">()</span></span>&#123;</div><div class="line">        <span class="keyword">if</span>((!lose_cake)&amp;&amp;x==n&amp;&amp;y==m)&#123;</div><div class="line">            have_cake=lose_cake=<span class="literal">true</span>;</div><div class="line">            blood=MIN(born_blood,blood+(born_blood&gt;&gt;<span class="number">1</span>));</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">Move</span><span class="params">()</span></span>&#123;</div><div class="line">        <span class="keyword">int</span> Max=-INF,new_x,new_y;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=<span class="number">4</span>;i++)&#123;</div><div class="line">            <span class="keyword">if</span>(CanMove(i))&#123;</div><div class="line">                new_x=x+opx[i],new_y=y+opy[i];</div><div class="line">                <span class="keyword">if</span>(Map[new_x][new_y].info&gt;Max)&#123;</div><div class="line">                    Max=Map[new_x][new_y].info;</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">if</span>(Max==-INF)&#123;</div><div class="line">            CheckCake();</div><div class="line">            last_x=last_y=CANTMOVE;</div><div class="line">            <span class="keyword">return</span>;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">int</span> final_dec;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=<span class="number">4</span>;i++)&#123;</div><div class="line">            new_x=x+opx[i],new_y=y+opy[i];</div><div class="line">            <span class="keyword">if</span>(Map[new_x][new_y].info==Max&amp;&amp;CanMove(i))&#123;</div><div class="line">                final_dec=i;<span class="keyword">break</span>;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">if</span>((age+<span class="number">1</span>)%<span class="number">5</span>==<span class="number">0</span>)&#123;</div><div class="line">            <span class="keyword">int</span> final_again=<span class="number">-1</span>;</div><div class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> i=final_dec<span class="number">-1</span>;i&gt;<span class="number">0</span>;i--)&#123;</div><div class="line">                <span class="keyword">if</span>(CanMove(i))&#123;</div><div class="line">                    final_again=i;<span class="keyword">break</span>;</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">            <span class="keyword">if</span>(final_again==<span class="number">-1</span>)&#123;</div><div class="line">                <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">4</span>;;i--)&#123;</div><div class="line">                    <span class="keyword">if</span>(CanMove(i))&#123;</div><div class="line">                        final_again=i;<span class="keyword">break</span>;</div><div class="line">                    &#125;</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">            final_dec=final_again;</div><div class="line">        &#125;</div><div class="line">        last_x=x;last_y=y;</div><div class="line">        Map[x][y].Off();</div><div class="line">        x+=opx[final_dec];y+=opy[final_dec];</div><div class="line">        Map[x][y].On();CheckCake();</div><div class="line">        <span class="keyword">return</span>;</div><div class="line">    &#125;</div><div class="line">&#125;;</div><div class="line"> </div><div class="line"><span class="built_in">std</span>::<span class="built_in">vector</span>&lt;Ant_Def&gt; ant;</div><div class="line"> </div><div class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">int</span> <span class="title">Find_Cake</span><span class="params">()</span></span>&#123;</div><div class="line">    <span class="keyword">int</span> ant_cnt=ant.size();</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;ant_cnt;i++)&#123;</div><div class="line">        <span class="keyword">if</span>(ant[i].Have_Cake())&#123;</div><div class="line">            <span class="keyword">return</span> i;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> CANTMOVE;</div><div class="line">&#125;</div><div class="line"> </div><div class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">int</span> <span class="title">dist</span><span class="params">(<span class="keyword">int</span> x1,<span class="keyword">int</span> y1,<span class="keyword">int</span> x2,<span class="keyword">int</span> y2)</span></span>&#123;</div><div class="line">    <span class="keyword">return</span> (x1-x2)*(x1-x2)+(y1-y2)*(y1-y2);</div><div class="line">&#125;</div><div class="line"> </div><div class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">Print</span><span class="params">()</span></span>&#123;</div><div class="line">    <span class="keyword">if</span>(loser_flag) <span class="built_in">printf</span>(GAMEOVER,lose_time);</div><div class="line">    <span class="keyword">else</span> <span class="built_in">printf</span>(GAMING);</div><div class="line">    <span class="keyword">int</span> ant_cnt=ant.size();</div><div class="line">    <span class="built_in">printf</span>(<span class="string">"%d\n"</span>,ant_cnt);</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;ant_cnt;i++)&#123;</div><div class="line">        ant[i].Prx();</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span>;</div><div class="line">&#125;</div><div class="line"> </div><div class="line"><span class="keyword">struct</span> Cannon_Def&#123;</div><div class="line">    <span class="keyword">int</span> x,y;</div><div class="line">    <span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">in</span><span class="params">()</span></span>&#123;</div><div class="line">        <span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;x,&amp;y);</div><div class="line">        Map[x][y].On();</div><div class="line">        <span class="keyword">return</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="function"><span class="keyword">inline</span> <span class="keyword">bool</span> <span class="title">Reach</span><span class="params">(<span class="keyword">int</span> attack_id)</span></span>&#123;</div><div class="line">        <span class="keyword">return</span> dist(x,y,ant[attack_id].x,ant[attack_id].y)&lt;=r*r;</div><div class="line">    &#125;</div><div class="line">    <span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">Attack</span><span class="params">()</span></span>&#123;</div><div class="line">        <span class="keyword">int</span> attack_id=<span class="number">-1</span>,backup_attack=<span class="number">-1</span>;</div><div class="line">        <span class="keyword">if</span>(lose_cake)&#123;</div><div class="line">            backup_attack=Find_Cake();</div><div class="line">            <span class="keyword">if</span>(Reach(backup_attack))&#123;</div><div class="line">                attack_id=backup_attack;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">int</span> ant_cnt=ant.size();</div><div class="line">        <span class="keyword">if</span>(attack_id==<span class="number">-1</span>)&#123;</div><div class="line">            <span class="keyword">int</span> Min=INF;</div><div class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;ant_cnt;i++)&#123;</div><div class="line">                <span class="keyword">int</span> temp=dist(x,y,ant[i].x,ant[i].y);</div><div class="line">                <span class="keyword">if</span>(temp&lt;Min)&#123;</div><div class="line">                    Min=temp;</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;ant_cnt;i++)&#123;</div><div class="line">                <span class="keyword">if</span>(Min==dist(x,y,ant[i].x,ant[i].y)&amp;&amp;Reach(i))&#123;</div><div class="line">                    attack_id=i;</div><div class="line">                    <span class="keyword">break</span>;</div><div class="line">                &#125;</div><div class="line">            &#125;       </div><div class="line">        &#125;</div><div class="line">        <span class="keyword">if</span>(attack_id==<span class="number">-1</span>) <span class="keyword">return</span>;</div><div class="line">        <span class="keyword">int</span> a_x=ant[attack_id].x,a_y=ant[attack_id].y,min_x,min_y,max_x,max_y;</div><div class="line">        <span class="keyword">if</span>(x&lt;a_x)&#123;</div><div class="line">            min_x=x;max_x=a_x;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">else</span>&#123;</div><div class="line">            min_x=a_x;max_x=x;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">if</span>(y&lt;a_y)&#123;</div><div class="line">            min_y=y;max_y=a_y;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">else</span>&#123;</div><div class="line">            min_y=a_y;max_y=y;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">if</span>(min_x==max_x||min_y==max_y)&#123;</div><div class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;ant_cnt;i++)&#123;</div><div class="line">                <span class="keyword">if</span>(i==attack_id||ant[i].SimpleJudge(min_x,max_x,min_y,max_y))&#123;</div><div class="line">                    ant[i].Injury();</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">else</span>&#123;</div><div class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;ant_cnt;i++)&#123;</div><div class="line">                <span class="keyword">float</span> A=ant[attack_id].CalK(x,y);</div><div class="line">                <span class="keyword">if</span>(i==attack_id||ant[i].FlexJudge(min_x,max_x,min_y,max_y,A,D(a_y)-A*D(a_x)))&#123;</div><div class="line">                    ant[i].Injury();</div><div class="line">                &#125;</div><div class="line">            &#125;       </div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span>;</div><div class="line">    &#125;</div><div class="line">&#125;;</div><div class="line"> </div><div class="line">Cannon_Def cannon[MAXC];</div><div class="line"> </div><div class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">ReadIn</span><span class="params">()</span></span>&#123;</div><div class="line">    <span class="built_in">scanf</span>(<span class="string">"%d%d%d%d%d"</span>,&amp;n,&amp;m,&amp;s,&amp;d,&amp;r);</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=s;i++) cannon[i].in();</div><div class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;t);</div><div class="line">    <span class="keyword">return</span>;</div><div class="line">&#125;</div><div class="line"> </div><div class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">bool</span> <span class="title">Game_Alive</span><span class="params">()</span></span>&#123;</div><div class="line">    <span class="keyword">if</span>(!lose_cake) <span class="keyword">return</span> <span class="literal">true</span>;</div><div class="line">    <span class="keyword">int</span> ant_cnt=ant.size();</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;ant_cnt;i++)&#123;</div><div class="line">        <span class="keyword">if</span>(ant[i].Ant_Win())&#123;</div><div class="line">            <span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</div><div class="line">&#125;</div><div class="line"> </div><div class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">Add_Ants</span><span class="params">()</span></span>&#123;</div><div class="line">    <span class="keyword">int</span> ant_cnt=ant.size();</div><div class="line">    <span class="keyword">if</span>((!Map[<span class="number">0</span>][<span class="number">0</span>].having_sth)&amp;&amp;ant_cnt&lt;ANT_LIMIT)&#123;</div><div class="line">        ant_id++;</div><div class="line">        Ant_Def new_ant;</div><div class="line">        new_ant.Preset();</div><div class="line">        ant.push_back(new_ant);</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span>;</div><div class="line">&#125;</div><div class="line"> </div><div class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">Add_Age</span><span class="params">()</span></span>&#123;</div><div class="line">    <span class="keyword">int</span> ant_cnt=ant.size();</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;ant_cnt;i++)&#123;</div><div class="line">        ant[i].Grow();</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span>;</div><div class="line">&#125;</div><div class="line"> </div><div class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">Check_Dies</span><span class="params">()</span></span>&#123;</div><div class="line">    <span class="keyword">int</span> ant_cnt=ant.size();</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;ant_cnt;i++)&#123;</div><div class="line">        <span class="keyword">if</span>(ant[i].Death())&#123;</div><div class="line">            <span class="keyword">if</span>(ant[i].Have_Cake())&#123;</div><div class="line">                lose_cake=<span class="literal">false</span>;</div><div class="line">            &#125;</div><div class="line">            Map[ant[i].x][ant[i].y].Off();</div><div class="line">            ant.erase(ant.begin()+i);</div><div class="line">            --i;--ant_cnt;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span>;</div><div class="line">&#125;</div><div class="line"> </div><div class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">Ants_Move</span><span class="params">()</span></span>&#123;</div><div class="line">    <span class="keyword">int</span> ant_cnt=ant.size();</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;ant_cnt;i++)&#123;</div><div class="line">        ant[i].Move();</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span>;</div><div class="line">&#125;</div><div class="line"> </div><div class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">Cannon_Attack</span><span class="params">()</span></span>&#123;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=s;i++)&#123;</div><div class="line">        cannon[i].Attack();</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span>;</div><div class="line">&#125;</div><div class="line"> </div><div class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">Clear_Map_Info</span><span class="params">()</span></span>&#123;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;=n;i++)&#123;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;=m;j++)&#123;</div><div class="line">            <span class="keyword">if</span>(Map[i][j].info&gt;<span class="number">0</span>)&#123;</div><div class="line">                Map[i][j].Update(<span class="number">-1</span>);</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span>;</div><div class="line">&#125;</div><div class="line"> </div><div class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">Add_Info</span><span class="params">()</span></span>&#123;</div><div class="line">    <span class="keyword">int</span> ant_cnt=ant.size();</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;ant_cnt;i++)&#123;</div><div class="line">        ant[i].Info();</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span>;</div><div class="line">&#125;</div><div class="line"> </div><div class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">bool</span> <span class="title">Gaming_Second</span><span class="params">(<span class="keyword">int</span> cur)</span></span>&#123;</div><div class="line">    Add_Ants();</div><div class="line">    Add_Info();</div><div class="line">    Ants_Move();</div><div class="line">    Cannon_Attack();</div><div class="line">    Check_Dies();</div><div class="line">    <span class="keyword">if</span>(!Game_Alive())&#123;</div><div class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line">    &#125;</div><div class="line">    Add_Age();</div><div class="line">    Clear_Map_Info();</div><div class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</div><div class="line">&#125;</div><div class="line"> </div><div class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">Work</span><span class="params">()</span></span>&#123;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=t;i++)&#123;</div><div class="line">        <span class="keyword">if</span>(!Gaming_Second(i))&#123;</div><div class="line">            lose_time=i;</div><div class="line">            loser_flag=<span class="literal">true</span>;</div><div class="line">            <span class="keyword">break</span>;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span>;</div><div class="line">&#125;</div><div class="line"> </div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</div><div class="line">    ReadIn();Work();Print();</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2015/09/12/一年/" rel="next" title="一年">
+                <i class="fa fa-chevron-left"></i> 一年
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2015/10/23/决战-NOIP2015/" rel="prev" title="决战-NOIP2015">
+                决战-NOIP2015 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <div class="ds-share flat" data-thread-key="2015/10/01/ZJOI-2008-杀蚂蚁/"
+     data-title="[ZJOI 2008] 杀蚂蚁"
+     data-content=""
+     data-url="http://stdafx.ga/2015/10/01/ZJOI-2008-杀蚂蚁/">
+  <div class="ds-share-inline">
+    <ul  class="ds-share-icons-16">
+
+      <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
+      <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+      <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+      <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
+      <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+
+    </ul>
+    <div class="ds-share-icons-more">
+    </div>
+  </div>
+</div>
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2015/10/01/ZJOI-2008-杀蚂蚁/"
+           data-title="[ZJOI 2008] 杀蚂蚁" data-url="http://stdafx.ga/2015/10/01/ZJOI-2008-杀蚂蚁/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview sidebar-panel sidebar-panel-active">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.jpg"
+               alt="stdafx" />
+          <p class="site-author-name" itemprop="name">stdafx</p>
+          <p class="site-description motion-element" itemprop="description">Why Be A King When You Can Be A God ?</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">25</span>
+              <span class="site-state-item-name">posts</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-name">categories</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-name">tags</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              Links
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.cnblogs.com/lawyer/p/" title="phx" target="_blank">phx</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.csdn.net/hzoi_ztx" title="ztx" target="_blank">ztx</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://lzy-foenix.gitcafe.io/" title="lzy" target="_blank">lzy</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.cnblogs.com/joyouth/" title="ad" target="_blank">ad</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.csdn.net/qq_34025203?viewmode=contents" title="syx" target="_blank">syx</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.cnblogs.com/assassain/" title="lyc" target="_blank">lyc</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.cnblogs.com/Candyouth/" title="smz" target="_blank">smz</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.csdn.net/lglin000" title="lgl" target="_blank">lgl</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.csdn.net/zzzzzfy" title="zfy" target="_blank">zfy</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2015 - 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">stdafx</span>
+</div>
+
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="https://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"stdafx"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    
+    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+
+</body>
+</html>
