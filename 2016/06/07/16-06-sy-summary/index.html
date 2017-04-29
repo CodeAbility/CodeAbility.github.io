@@ -1,0 +1,1332 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="en">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="总结,游记," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="20160525考试
+如果省选之前考这套题,我省选就AK了… 后两道题和省选我没有A的两道题思路基本一样…
+
+fib
+
+k=1 的时候 ans=B*(A^0+A^1+...A^(n-1)) ,B是初始矩阵,A是转移矩阵 … 
+
+k&amp;gt;1的时候 ans=B*(A^0+A^1+...A^(n-1))^k
+
+等比数列求个和就好了…
+
+涉及到矩阵的除法,手算下逆就好了…
+
+最后算出来逆正好是A取反">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2016.06 沈阳游记">
+<meta property="og:url" content="http://stdafx.ga/2016/06/07/16-06-sy-summary/index.html">
+<meta property="og:site_name" content="stdafx's Blog">
+<meta property="og:description" content="20160525考试
+如果省选之前考这套题,我省选就AK了… 后两道题和省选我没有A的两道题思路基本一样…
+
+fib
+
+k=1 的时候 ans=B*(A^0+A^1+...A^(n-1)) ,B是初始矩阵,A是转移矩阵 … 
+
+k&amp;gt;1的时候 ans=B*(A^0+A^1+...A^(n-1))^k
+
+等比数列求个和就好了…
+
+涉及到矩阵的除法,手算下逆就好了…
+
+最后算出来逆正好是A取反">
+<meta property="og:updated_time" content="2016-06-07T14:56:14.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="2016.06 沈阳游记">
+<meta name="twitter:description" content="20160525考试
+如果省选之前考这套题,我省选就AK了… 后两道题和省选我没有A的两道题思路基本一样…
+
+fib
+
+k=1 的时候 ans=B*(A^0+A^1+...A^(n-1)) ,B是初始矩阵,A是转移矩阵 … 
+
+k&amp;gt;1的时候 ans=B*(A^0+A^1+...A^(n-1))^k
+
+等比数列求个和就好了…
+
+涉及到矩阵的除法,手算下逆就好了…
+
+最后算出来逆正好是A取反">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://stdafx.ga/2016/06/07/16-06-sy-summary/"/>
+
+
+
+
+
+  <title> 2016.06 沈阳游记 | stdafx's Blog </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?9c616d8a49183f1ab5abf3385d00a440";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">stdafx's Blog</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">Welcome</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            About
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://stdafx.ga/2016/06/07/16-06-sy-summary/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="stdafx">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/images/avatar.jpg">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="stdafx's Blog">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="stdafx's Blog" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                2016.06 沈阳游记
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-06-07T20:33:05+08:00">
+                2016-06-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/总结/" itemprop="url" rel="index">
+                    <span itemprop="name">总结</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="20160525"><a href="#20160525" class="headerlink" title="20160525"></a>20160525</h2><h3 id="考试"><a href="#考试" class="headerlink" title="考试"></a>考试</h3><ul>
+<li><p>如果省选之前考这套题,我省选就AK了… 后两道题和省选我没有A的两道题思路基本一样…</p>
+<ul>
+<li><p>fib</p>
+<ul>
+<li><p><code>k=1</code> 的时候 <code>ans=B*(A^0+A^1+...A^(n-1))</code> ,B是初始矩阵,A是转移矩阵 … </p>
+</li>
+<li><p><code>k&gt;1</code>的时候 <code>ans=B*(A^0+A^1+...A^(n-1))^k</code></p>
+</li>
+<li><p>等比数列求个和就好了…</p>
+</li>
+<li><p>涉及到矩阵的除法,手算下逆就好了…</p>
+</li>
+<li><p>最后算出来逆正好是A取反</p>
+</li>
+</ul>
+</li>
+<li><p>date</p>
+<ul>
+<li><p>比较丝帛的一道题</p>
+</li>
+<li><p>二分一个答案然后小于这个mid的边设成<code>-1</code>,否则是<code>1</code></p>
+</li>
+<li><p>就看一下树上有没有&gt;=0的路径就好了…</p>
+</li>
+<li><p>树分治就好了,因为还有l,r的限制再套个线段树<code>nlog^3</code></p>
+</li>
+<li><p><code>log^2</code>的话把线段树换成单调队列就好了..不过要bfs…</p>
+</li>
+</ul>
+</li>
+<li><p>pairing</p>
+<ul>
+<li><p>HEOI D2T3 …..</p>
+</li>
+<li><p>考试时少写了个if 就sad了</p>
+</li>
+<li><p>差分一下,就是求一个串出现多少次</p>
+</li>
+<li><p>搞出sa,建个主席树,瞎搞就好了</p>
+</li>
+<li><p>具体可以看HEOI D2T3 ….</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<a id="more"></a>
+<h3 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h3><ul>
+<li><p>就写了个杜教筛…</p>
+<ul>
+<li><p>51nod 约数之和</p>
+</li>
+<li><p>推了好长时间没搞出来 题解戳:<code>http://www.51nod.com/question/index.html#!questionId=1027</code></p>
+</li>
+<li><p>最后就是 ans =\sum<em>{d’=1}^{N}{d’\cdot \mu(d’)\sum</em>{i=1}^{\lfloor\frac{N}{d’}\rfloor}{\frac{\lfloor\frac{N}{i\cdot d’}\rfloor\cdot(\lfloor\frac{N}{i\cdot d’}\rfloor+1)}{2}}\sum_{d=1}^{\lfloor\frac{N}{d’}\rfloor}{\lfloor\frac{N}{d\cdot d’}\rfloor\cdot d}} ,latex没装好…大家自行脑补</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="20160526"><a href="#20160526" class="headerlink" title="20160526"></a>20160526</h2><h3 id="考试-1"><a href="#考试-1" class="headerlink" title="考试"></a>考试</h3><ul>
+<li><p>有一个丝帛写了4个小时第一题然后丝帛了…</p>
+<ul>
+<li><p>重组病毒</p>
+<ul>
+<li><p>可以发现这个玩意正好是个lct的过程的模拟 好神啊..</p>
+</li>
+<li><p>然后一个点的答案就是到根的虚边的数量</p>
+</li>
+<li><p>维护一个线段树就好了… 换根的只问子树的话就是 遥远的国度 那道题 … 虽然我没写过</p>
+</li>
+<li><p>说起来很清楚,可是写起来….</p>
+</li>
+<li><p>其实这题也可以不写线段树,可以直接上toptree….</p>
+</li>
+<li><p>因为toptree是支持对虚边的标记的… 想想当时写sone1的时候… 算了吧….</p>
+</li>
+</ul>
+</li>
+<li><p>第二三题考试的时候都没看 ….</p>
+</li>
+<li><p>循环排列</p>
+<ul>
+<li><p><code>k</code>个数构成置换的方案是<code>(k-1)!</code> 剩下的数就是错位排序</p>
+</li>
+<li><p>然后<code>C(n,k)*(k-1)!*f(n-k)</code></p>
+</li>
+<li><p>但是一个序列可能对应多个置换,容斥一下就好了</p>
+</li>
+</ul>
+</li>
+<li><p>第三题 十分丝帛…就不写了</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="题目-1"><a href="#题目-1" class="headerlink" title="题目"></a>题目</h3><ul>
+<li><p>写了两个数论题..</p>
+<ul>
+<li><p>51nod 平均最小公倍数</p>
+<ul>
+<li><code>ans=simga(simga(F(i),i=1-&gt;n/d),d=1-&gt;n)</code> , <code>F(n)</code>是和&lt;=n和n互质的数的和=<code>(n*phi(n)+[n==1])/2</code>,之后把<code>/2</code>拆开,把<code>n==1</code>分开算,杜教筛就好了..</li>
+</ul>
+</li>
+<li><p>51nod 最小公倍数计数</p>
+<ul>
+<li><p>这个题跟杜教筛并没有什么关系</p>
+</li>
+<li><p>化简一下就是 sum<em>{d=1}^{\sqrt{n}}{\mu(d)\sum</em>{a}\sum<em>{b}\sum</em>{r}{[a\le b][abr\le \lfloor\frac{n}{d^2}\rfloor]}} ,latex没装好…大家自行脑补</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="20160527"><a href="#20160527" class="headerlink" title="20160527"></a>20160527</h2><h3 id="考试-2"><a href="#考试-2" class="headerlink" title="考试"></a>考试</h3><ul>
+<li><p>今天的题目背景真是excited，而且都是bzoj的原题<code>3652-3654</code></p>
+<ul>
+<li><p>news</p>
+<ul>
+<li><p>题目显然要求的是两问的加权和</p>
+</li>
+<li><p>先考虑没有加密,直接数位dp即可，<code>f[i][j][k][2]</code>,表示dp到第i位，dp的数有没有顶到上界，使dp的数异或值最大的数有没有顶到上界，后面那一维是dp的数的个数和 和 他们异或后的和</p>
+</li>
+<li><p>之后是加密的情况，可以发现每一位都是独立的，那么就统计下每一位是<code>0</code>和<code>1</code>的数量，dp<code>60</code>遍就好了….然后再做一个把它们合起来的dp 就结束了</p>
+</li>
+<li><p>话说有个人写了<code>300b</code>…很神的样子，我写了3K….</p>
+</li>
+</ul>
+</li>
+<li><p>laugh</p>
+<ul>
+<li><p>这是一个丝帛题，分两种情况</p>
+</li>
+<li><p>一是b是a的祖先，那么<code>ans+=siz[a]*min(dep[a],k)</code></p>
+</li>
+<li><p>二是b是a的子树中的点，那么也就是求<code>dep[b]&lt;=dep[a]+k</code>的b的子树大小和，主席树就好了..</p>
+</li>
+<li><p>lyc 有一种空间<code>O(n)</code>的做法,就是bfs一遍,dep相同的bfs序是连着的,那么先算出不考虑k的限制的答案,减去<code>k+1</code>那一层的和就好了,维护个前缀和,二分下位置一减就好了</p>
+</li>
+</ul>
+</li>
+<li><p>naive</p>
+<ul>
+<li><p>这题和前两题难度明显是反比….</p>
+</li>
+<li><p>考试的时候写了个<code>30</code>分的暴力,就倍长几下,manacher下好了</p>
+</li>
+<li><p>先判断有没有回文的串,有的话就是inf</p>
+</li>
+<li><p>我们枚举最后回文串的中心,那么要是能再拼上的话,这个中心的回文半径一定会顶到左侧或是右侧</p>
+</li>
+<li><p>顶到之后我们需要在少的那边添加一些东西,那么我们把每个串的每个字符弄成一个点,再规定一个方向,表示需要向左补充或是向右补充</p>
+</li>
+<li><p>那么我们要做的就是设一个S点表示起点,枚举回文串的中心,看能不能顶到头,如果能就S到需要补充的位置建一条边</p>
+</li>
+<li><p>注意空串也可以是起点,也就是<code>[A][B]</code>是<code>A</code>,<code>B</code>是对称串</p>
+</li>
+<li><p>之后枚举其他串,看那整个串接过来之后,可以拼到哪里,如果恰好拼完那么就连接到<code>T&#39;</code>点,表示出现了一个回文串,如何T’点被访问到,说明就是<code>inf</code>,如果拼上去之后两边都剩一点,那么连接到T点,表示到此构造完了…否则就连到那个串的状态上去</p>
+</li>
+<li><p>然后先看有没有环,然后看T’会不会被访问,否则答案就是每个点的最长路,没环的话是个<code>DAG</code>,<code>topo</code>一下就好了</p>
+</li>
+<li><p>真的好难写…. ?</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>51nod 算法马拉松</p>
+<ul>
+<li><p>棋盘问题</p>
+<ul>
+<li><p>因为只能取奇数个</p>
+</li>
+<li><p>所以你取<code>1</code>个,对方怎么取,最后还是奇数个</p>
+</li>
+<li><p>最后一定剩一个,然后就赢了…</p>
+</li>
+</ul>
+</li>
+<li><p>约数和</p>
+<ul>
+<li><p>坐标随机嘛 直接暴力就好了</p>
+</li>
+<li><p>然后考虑下c对a的贡献是约数个数就好了</p>
+</li>
+</ul>
+</li>
+<li><p>平均数</p>
+<ul>
+<li><p>二分个答案</p>
+</li>
+<li><p>给每个数减去<code>mid</code>,求前缀和就好了</p>
+</li>
+<li><p>之后统计区间和<code>&gt;=0</code>的数量    </p>
+</li>
+</ul>
+</li>
+<li><p>后面是三个数论题 一个都不会….</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="20160528"><a href="#20160528" class="headerlink" title="20160528"></a>20160528</h2><h3 id="考试-3"><a href="#考试-3" class="headerlink" title="考试"></a>考试</h3><ul>
+<li><p>euler</p>
+<ul>
+<li><p>求N个点的欧拉图的数量</p>
+</li>
+<li><p>设<code>G[n]</code>是欧拉图的数量,<code>F[n]</code>是不考虑联通情况的欧拉图的数量,那么<code>F[n]=2^((n-1)\*(n-2)/2)</code>,就是拿出一个点来,维护度数是偶数的性质,之后考虑dp, <code>G[n]=F[n]-sigma(C(n-1,i-1)\*G[i]*F[n-i])</code>,也就是把只少两个联通块的情况减掉.</p>
+</li>
+</ul>
+</li>
+<li><p>seq</p>
+<ul>
+<li><p>求区间和-区间最大值是k的倍数的区间个数</p>
+</li>
+<li><p><code>300000</code>的数据<code>log^2</code>水过了…</p>
+</li>
+<li><p>考虑一个数所覆盖的范围,有一个<code>L,R</code>,我们取长度较小的那一段,走过去,然后另一半在主席树上查询就好了,复杂度为啥是<code>log^2</code>呢,这样做等效于,<code>1-&gt;n</code>找一个最大的数,之后把序列劈开,相当于启发式合并反着来</p>
+</li>
+</ul>
+</li>
+<li><p>tree</p>
+<ul>
+<li><p>考试时最后<code>20min</code>写完,并没有调出来…<code>sad</code></p>
+</li>
+<li><p>如果是链的情况,我们维护一个线段树,如果不是链,我们把它剖成链,那么对于一条重链,top点为子树的答案就是链上不考虑重儿子的<code>dp</code>值的最大子段和</p>
+</li>
+<li><p>修改的话,一路跳上去就好了… 丝帛的我对于每个链都搞了个线段树…</p>
+</li>
+</ul>
+</li>
+<li><p>KuribohG 还给我们讲了课</p>
+<ul>
+<li><p>打算之后刷一刷他给的题</p>
+</li>
+<li><p>做一做 复习复习</p>
+<ul>
+<li><p>拉格朗日乘数法</p>
+</li>
+<li><p>快速莫比乌斯变换</p>
+</li>
+<li><p>辛普森积分</p>
+</li>
+<li><p>zkw费用流</p>
+</li>
+<li><p>仙人掌相关</p>
+</li>
+<li><p>最小树形图 &amp; 生成树相关</p>
+</li>
+<li><p>矩阵求逆 &amp;　倍增</p>
+</li>
+<li><p>拟阵</p>
+</li>
+<li><p>线性规划</p>
+</li>
+<li><p>拉丁方矩阵</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="20160528-1"><a href="#20160528-1" class="headerlink" title="20160528"></a>20160528</h2><h3 id="今天并没有考试"><a href="#今天并没有考试" class="headerlink" title="今天并没有考试"></a>今天并没有考试</h3><h3 id="刷了一波题"><a href="#刷了一波题" class="headerlink" title="刷了一波题"></a>刷了一波题</h3><ul>
+<li><p>骑行川藏</p>
+<ul>
+<li><p>拉格朗日乘数法</p>
+<ul>
+<li><p><code>g(..) = simga(ki*(vi-vi&#39;))-E=0</code></p>
+</li>
+<li><p><code>F(..,lambda)  = f(,,) + lambda * g(..)</code></p>
+</li>
+<li><p>化简一下可以发现<code>lambda</code>单调</p>
+</li>
+<li><p>那么二分<code>lambda</code>，对于每个变元列出偏导等于<code>0</code>的方程，解就可能是答案… 不要问我为什么</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>圆的面积并</p>
+<ul>
+<li><p><code>simpson</code>积分裸题</p>
+</li>
+<li><p>先求出一个关于x的连续段，对这个连续段做<code>simpson</code>积分就好了</p>
+</li>
+<li><p>这题卡精度，<code>eps</code>写成<code>1e-13</code></p>
+</li>
+</ul>
+</li>
+<li><p>月下柠檬树</p>
+<ul>
+<li><p>实际上影子可以看成好多好多圆在地上的面积并</p>
+</li>
+<li><p>两个圆之间的无数个圆实际上是两个圆和这两个圆的公切线之间的面积，那么先求出公切线和圆</p>
+</li>
+<li><p>跑<code>simpson</code>就好了</p>
+</li>
+</ul>
+</li>
+<li><p>matrix bzoj 4128</p>
+<ul>
+<li><p>矩阵<code>bsgs</code></p>
+</li>
+<li><p>只是为了练习矩阵求逆</p>
+</li>
+<li><p>求逆的话，就是搞两个矩阵，把原矩阵写在左边，把单位矩阵写在右边，把原矩阵消成单位矩阵，同时右边的矩阵跟着变化，相当于左边的矩阵和右边的矩阵都乘了一个原矩阵的逆矩阵</p>
+</li>
+<li><p>少写了个<code>mod</code>…wa了N次</p>
+</li>
+</ul>
+</li>
+<li><p>钙铁锌硒维生素</p>
+<ul>
+<li><p>两个满秩矩阵，求A的每个行向量被字典序最小的B的哪个行向量替换后，A矩阵仍然线性无关</p>
+</li>
+<li><p>设系数矩阵为C，那么<code>C*A=B</code>，那么<code>C(i,j)&gt;0</code> 说Bj的线性表出需要Ai，那么就建一条边</p>
+</li>
+<li><p>要求每个A的行向量都要有B替换，那么二分图跑一跑就好了</p>
+</li>
+</ul>
+</li>
+<li><p>uva 矩阵</p>
+<ul>
+<li><p>求矩阵A的若干次幂的前缀和</p>
+</li>
+<li><p>那么直接矩阵倍增就好了</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="20160530"><a href="#20160530" class="headerlink" title="20160530"></a>20160530</h2><h3 id="考试-4"><a href="#考试-4" class="headerlink" title="考试"></a>考试</h3><ul>
+<li><p>wtf 差20分就AK了…原因是少开了unsigned long long</p>
+<ul>
+<li><p>函数求和</p>
+<ul>
+<li><p>ad的题…</p>
+</li>
+<li><p>考虑分块，看每个A对每个块的贡献，那么预处理出来每个块的答案，不是整块的答案的话就树状数组求一下</p>
+</li>
+<li><p>这样是<code>n*sqrt(n)*log(n)</code>的，考虑如何把log干掉</p>
+</li>
+<li><p>现在修改要n次，查询要<code>nsqrt(n)</code>次，那么查询<code>O(1)</code>就好了,那么这启发我们也要对A的前缀和分块….这样修改<code>sqrt(n)</code>,询问<code>O(1)</code>,整体复杂度<code>O(nsqrt(n))</code></p>
+</li>
+<li><p>还有一种空间<code>O(n)</code>的做法,<code>%%ad</code>,我们把对a的修改改成增量修改,那么贡献就可分了…</p>
+</li>
+<li><p>那么离线考虑块内和块外的贡献,块内的<code>sort</code>一下之后暴力,块外暴力维护前缀和</p>
+</li>
+</ul>
+</li>
+<li><p>解方程</p>
+<ul>
+<li><p>sdoi2013 原题</p>
+</li>
+<li><p><code>&gt;=</code>的限制并没有什么用,因为在等式的右边减一下就好了</p>
+</li>
+<li><p><code>&lt;=</code>的限制没法搞,那么就总的情况-不合法的情况就好了</p>
+</li>
+<li><p>不合法的话就是<code>&gt;=0</code>…然后容斥一下就好了</p>
+</li>
+<li><p>要求<code>n=10^9</code>的组合数取<code>mod</code>,把<code>mod</code>拆开<code>crt</code>就好了</p>
+</li>
+</ul>
+</li>
+<li><p>宇宙序列</p>
+<ul>
+<li><p><code>fwt</code>一下搞出点值</p>
+</li>
+<li><p>之后题目显然要求的是<code>A^1+A^2+A^4+...</code>那么后面一项是前面一项的平方,<code>mod</code>只有<code>10007</code>,那么<code>i-&gt;i*i % mod</code> 连边,会有出来一个图,有些点在环上,那么就处理下环的前缀和和每个点相对于换上起点的位置,有些点不在环上,但是打表发现,每个点走一步就到了环上,然后就<code>O(1)</code>就能求出来那玩意…</p>
+</li>
+<li><p>之后逆<code>fwt</code>就好了</p>
+</li>
+<li><p>还有一种倍增的做法…先dp出每个数向后<code>2^j</code>的和…</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="题目-2"><a href="#题目-2" class="headerlink" title="题目"></a>题目</h3><ul>
+<li><p>bzoj 3583 &amp;&amp; 4362 杰杰的女性朋友</p>
+<ul>
+<li><p>矩阵倍增求<code>sigma</code></p>
+</li>
+<li><p><code>(A*B) ^ k</code>,A是<code>1000*20</code>的 B是<code>20*1000</code>的矩阵,直接做显然不可以,那么可以发现<code>B*A</code>是<code>20*20</code>,那么就求<code>ans = A*(B*A)^d-1 *B</code>这样复杂度就下来了…</p>
+</li>
+<li><p>卡常差评  重写了两次…</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="20160531"><a href="#20160531" class="headerlink" title="20160531"></a>20160531</h2><h3 id="考试-5"><a href="#考试-5" class="headerlink" title="考试"></a>考试</h3><ul>
+<li><p>题目差评..</p>
+<ul>
+<li><p>制作冰淇淋</p>
+<ul>
+<li><p>直接背包</p>
+</li>
+<li><p>价值 = 重量 开<code>bool</code>数组就好了</p>
+</li>
+<li><p>二进制分组 多个<code>log</code> 或者是 单调队列</p>
+</li>
+<li><p>竟然卡常差评</p>
+</li>
+</ul>
+</li>
+<li><p>电磁领域</p>
+<ul>
+<li><p>考试时理解错了题意</p>
+</li>
+<li><p>后来把边取<code>min</code>改成<code>spfa</code>就A了….</p>
+</li>
+<li><p>跑出最短路,直接上<code>sg</code>函数就好了</p>
+</li>
+</ul>
+</li>
+<li><p>觉醒力量</p>
+<ul>
+<li><p>可以发现 <code>46189=11*13*17*19</code></p>
+</li>
+<li><p>那如果我们知道<code>17</code>怎么做,crt一下就可以A了</p>
+</li>
+<li><p>考虑<code>17</code>的时候怎么做,维护一个线段树,17这个数很小,我们把这段区间如果传一个x进去的话的结果预处理出来,那么合并就很显然了..</p>
+</li>
+<li><p>如果模数是个质数 ?? 如果只有乘法和幂次的话就取个<code>ind</code> 有加法并不会做</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="题目泛做"><a href="#题目泛做" class="headerlink" title="题目泛做"></a>题目泛做</h3><ul>
+<li><p>heoi 2014 林中路径</p>
+<ul>
+<li><p>求<code>sigma(T^i*i^2)</code></p>
+</li>
+<li><p>构造A,B,C矩阵表示<code>T^i*i^2</code>,<code>T^i*i</code>,<code>T^i</code></p>
+</li>
+<li><p>那么<code>B(i) = B(i-j) * A(j) + B(j) * A(i-j)</code></p>
+</li>
+<li><p><code>C(i) = C(i-j) * A(j) + C(j) * A(i-j) + 2 * B(j) * B(i-j)</code></p>
+</li>
+<li><p>我发现我写一道矩乘就T一道…</p>
+</li>
+</ul>
+</li>
+<li><p>Wycieczki</p>
+<ul>
+<li><p>直接倍增就好了</p>
+</li>
+<li><p>二分会T的</p>
+</li>
+<li><p>我发现我写一道矩乘就T一道…</p>
+</li>
+</ul>
+</li>
+<li><p>haoi set</p>
+<ul>
+<li><p>fwt搞出点值</p>
+</li>
+<li><p>等比数列一下</p>
+</li>
+<li><p>而且我发现or的fwt其实就是快速莫比乌斯变换</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="20160601"><a href="#20160601" class="headerlink" title="20160601"></a>20160601</h2><h3 id="考试-6"><a href="#考试-6" class="headerlink" title="考试"></a>考试</h3><ul>
+<li><p>波哥说和noi难度差不多….</p>
+<ul>
+<li><p>皇后游戏</p>
+<ul>
+<li><p>波哥说是送分题</p>
+</li>
+<li><p>我看了<code>20</code>分钟没看出来</p>
+</li>
+<li><p>后来瞎写了一发 发现样例都不对</p>
+</li>
+<li><p>之后发现样例错了</p>
+</li>
+<li><p>拍了拍之后就被卡常了 *shit 最后<code>90</code>…</p>
+</li>
+<li><p>按两个人的情况排个序就好了</p>
+</li>
+</ul>
+</li>
+<li><p>旅行计划</p>
+<ul>
+<li><p>赤裸裸的最小曼哈顿生成树</p>
+</li>
+<li><p>然而我并没有学过</p>
+</li>
+<li><p>边是<code>n^2</code>级别的，那么我们考虑不建边</p>
+</li>
+<li><p><code>krusal</code>是不可能不建边的</p>
+</li>
+<li><p>那就是<code>prim</code></p>
+</li>
+<li><p>prim的话会找一条最短的可扩展的边来扩展</p>
+</li>
+<li><p>那么维护一个可以删除的kd树或是超哥线段树套一个<code>set</code>,再用一个堆维护<code>prim</code>的可扩展边</p>
+</li>
+<li><p>不幸的是我写了后者,写了好长时间..</p>
+</li>
+<li><p>理论上是<code>log^2</code>的</p>
+</li>
+<li><p>不会最小曼哈顿生成树竟然<code>80</code>分</p>
+</li>
+<li><p>我只能说我尽力了</p>
+</li>
+<li><p>后来写了<code>fastcall</code>卡了卡常数就<code>1994msAC</code>了 时间限制<code>2000ms</code>…</p>
+</li>
+<li><p>真是爽啊</p>
+</li>
+<li><p>为啥那么多人都学过最小曼哈顿生成树啊..</p>
+</li>
+</ul>
+</li>
+<li><p>维修机器人</p>
+<ul>
+<li>好像是个贪心 并不会,回头再改…</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="要学习的东西-amp-计划"><a href="#要学习的东西-amp-计划" class="headerlink" title="要学习的东西 &amp; 计划"></a>要学习的东西 &amp; 计划</h2><ul>
+<li><p>生成树</p>
+<ul>
+<li><p>朱刘</p>
+</li>
+<li><p>曼哈顿距离生成树</p>
+</li>
+<li><p>..其他生成树</p>
+</li>
+</ul>
+</li>
+<li><p>zkw 费用流</p>
+<ul>
+<li>发现我好久没写网络流了…</li>
+</ul>
+</li>
+<li><p>仙人掌相关</p>
+</li>
+<li><p>拟阵</p>
+</li>
+<li><p>线性规划</p>
+</li>
+<li><p>拉丁方矩阵</p>
+</li>
+<li><p>扫描线</p>
+</li>
+<li><p>三维凸包</p>
+</li>
+<li><p>扩展crt 模方程组</p>
+</li>
+<li><p>pick定理</p>
+</li>
+<li><p>四边形不等式</p>
+</li>
+<li><p>三角剖分</p>
+</li>
+<li><p>旋转卡壳</p>
+</li>
+<li><p>hall定理</p>
+</li>
+<li><p>sbt</p>
+</li>
+<li><p>avl</p>
+</li>
+</ul>
+<blockquote>
+<p>之后就看见什么就学什么就好了</p>
+<p>打算25号之前把这些搞完</p>
+<p>之后好像就没什么可学的了</p>
+<p>然后就开始总复习就好了</p>
+</blockquote>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><blockquote>
+<p>最后 <code>180 + 55 + 235 + 150 + 280 + 165 + 170 = 1235</code></p>
+<p>这几次考试发现了自己的缺点</p>
+<blockquote>
+<p>1.比如总是莫名其妙扣一些奇怪的题,然而最后简单题连看都没看,比如day2…2和3题并不是很难啊…</p>
+<p>2.然后有时候容易走神,没有精神</p>
+<p>3.容易受其他人的影响</p>
+</blockquote>
+<p>当然也有做的比较好的地方,而且发现有些题只要自己肯想,努力去做了,分一定不低</p>
+<p>还有就是两个夏令营,我选了THU,感觉PKU并不适合我,我也相信我的这一步选择是正确的</p>
+</blockquote>
+<h2 id=""><a href="#" class="headerlink" title="?"></a>?</h2><ul>
+<li><p>距离<code>noi</code>只有<code>50</code>天了,要加油啊</p>
+</li>
+<li><p>我一定要<strong>Au</strong>啊~</p>
+</li>
+</ul>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/总结/" rel="tag"># 总结</a>
+          
+            <a href="/tags/游记/" rel="tag"># 游记</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/05/23/before-noi-summary-01/" rel="next" title="近期概况 & 总结">
+                <i class="fa fa-chevron-left"></i> 近期概况 & 总结
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/06/07/16-06-thusc/" rel="prev" title="THUSC 2016 游记">
+                THUSC 2016 游记 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.jpg"
+               alt="stdafx" />
+          <p class="site-author-name" itemprop="name">stdafx</p>
+          <p class="site-description motion-element" itemprop="description">Wave in the golden age.</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">26</span>
+              <span class="site-state-item-name">posts</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-name">categories</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-name">tags</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              Links
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.cnblogs.com/lawyer/p/" title="phx" target="_blank">phx</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.csdn.net/hzoi_ztx" title="ztx" target="_blank">ztx</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://lzy-foenix.gitcafe.io/" title="lzy" target="_blank">lzy</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.cnblogs.com/joyouth/" title="ad" target="_blank">ad</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.csdn.net/qq_34025203?viewmode=contents" title="syx" target="_blank">syx</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.cnblogs.com/assassain/" title="lyc" target="_blank">lyc</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.cnblogs.com/Candyouth/" title="smz" target="_blank">smz</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.csdn.net/lglin000" title="lgl" target="_blank">lgl</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.csdn.net/zzzzzfy" title="zfy" target="_blank">zfy</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#20160525"><span class="nav-number">1.</span> <span class="nav-text">20160525</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#考试"><span class="nav-number">1.1.</span> <span class="nav-text">考试</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#题目"><span class="nav-number">1.2.</span> <span class="nav-text">题目</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#20160526"><span class="nav-number">2.</span> <span class="nav-text">20160526</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#考试-1"><span class="nav-number">2.1.</span> <span class="nav-text">考试</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#题目-1"><span class="nav-number">2.2.</span> <span class="nav-text">题目</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#20160527"><span class="nav-number">3.</span> <span class="nav-text">20160527</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#考试-2"><span class="nav-number">3.1.</span> <span class="nav-text">考试</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#20160528"><span class="nav-number">4.</span> <span class="nav-text">20160528</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#考试-3"><span class="nav-number">4.1.</span> <span class="nav-text">考试</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#20160528-1"><span class="nav-number">5.</span> <span class="nav-text">20160528</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#今天并没有考试"><span class="nav-number">5.1.</span> <span class="nav-text">今天并没有考试</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#刷了一波题"><span class="nav-number">5.2.</span> <span class="nav-text">刷了一波题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#20160530"><span class="nav-number">6.</span> <span class="nav-text">20160530</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#考试-4"><span class="nav-number">6.1.</span> <span class="nav-text">考试</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#题目-2"><span class="nav-number">6.2.</span> <span class="nav-text">题目</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#20160531"><span class="nav-number">7.</span> <span class="nav-text">20160531</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#考试-5"><span class="nav-number">7.1.</span> <span class="nav-text">考试</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#题目泛做"><span class="nav-number">7.2.</span> <span class="nav-text">题目泛做</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#20160601"><span class="nav-number">8.</span> <span class="nav-text">20160601</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#考试-6"><span class="nav-number">8.1.</span> <span class="nav-text">考试</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#要学习的东西-amp-计划"><span class="nav-number">9.</span> <span class="nav-text">要学习的东西 & 计划</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">10.</span> <span class="nav-text">总结</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#"><span class="nav-number">11.</span> <span class="nav-text">?</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2015 - 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">stdafx</span>
+</div>
+
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="https://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+	
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+
+</body>
+</html>

@@ -1,0 +1,804 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="en">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="总结,比赛," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="记一次悲壮的骗分比赛
+link: http://www.51nod.com/contest/problemList.html#!contestId=24
+
+day 1本来这几天是做bzoj的考试十连测，晚上改完了题目，十分无聊
+突然想起来51nod有比赛,而且有一段时间没打比赛了,所以觉得要好好写,争取拿钱">
+<meta property="og:type" content="article">
+<meta property="og:title" content="记一次悲壮的骗分比赛">
+<meta property="og:url" content="http://stdafx.ga/2016/06/29/51nod-exciting-competition/index.html">
+<meta property="og:site_name" content="stdafx's Blog">
+<meta property="og:description" content="记一次悲壮的骗分比赛
+link: http://www.51nod.com/contest/problemList.html#!contestId=24
+
+day 1本来这几天是做bzoj的考试十连测，晚上改完了题目，十分无聊
+突然想起来51nod有比赛,而且有一段时间没打比赛了,所以觉得要好好写,争取拿钱">
+<meta property="og:updated_time" content="2016-07-20T08:54:35.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="记一次悲壮的骗分比赛">
+<meta name="twitter:description" content="记一次悲壮的骗分比赛
+link: http://www.51nod.com/contest/problemList.html#!contestId=24
+
+day 1本来这几天是做bzoj的考试十连测，晚上改完了题目，十分无聊
+突然想起来51nod有比赛,而且有一段时间没打比赛了,所以觉得要好好写,争取拿钱">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://stdafx.ga/2016/06/29/51nod-exciting-competition/"/>
+
+
+
+
+
+  <title> 记一次悲壮的骗分比赛 | stdafx's Blog </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?9c616d8a49183f1ab5abf3385d00a440";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">stdafx's Blog</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">Welcome</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            About
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://stdafx.ga/2016/06/29/51nod-exciting-competition/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="stdafx">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/images/avatar.jpg">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="stdafx's Blog">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="stdafx's Blog" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                记一次悲壮的骗分比赛
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-06-29T15:33:22+08:00">
+                2016-06-29
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/总结/" itemprop="url" rel="index">
+                    <span itemprop="name">总结</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="记一次悲壮的骗分比赛"><a href="#记一次悲壮的骗分比赛" class="headerlink" title="记一次悲壮的骗分比赛"></a>记一次悲壮的骗分比赛</h2><blockquote>
+<p>link: <a href="http://www.51nod.com/contest/problemList.html#!contestId=24" target="_blank" rel="external">http://www.51nod.com/contest/problemList.html#!contestId=24</a></p>
+</blockquote>
+<h3 id="day-1"><a href="#day-1" class="headerlink" title="day 1"></a>day 1</h3><p>本来这几天是做bzoj的考试十连测，晚上改完了题目，十分无聊</p>
+<p>突然想起来51nod有比赛,而且有一段时间没打比赛了,所以觉得要好好写,争取拿钱</p>
+<a id="more"></a>
+<p>从7点30开始我就一直等着,到了8点终于开始了..</p>
+<p>打开第一题,好像是个结论题,答案不是B就是L,于是我抱着侥幸的心理叫了一发B,发现过了9个点….<br>只剩一个点,ymx提出了二分数据的方法,开始二分n的大小可是并没有什么用,因为我们发现所有数据的n都是1w…. 之后我们又二分第5000个数的大小,发现最后一个点第5000个数是511,然后就A了…</p>
+<p>同机房的小伙伴按照我和ymx搞出了来的数试了试,发现51nod换数据了…不过最后他们也二分出来了….</p>
+<p>之后看B题,发现不会做…</p>
+<p>去看C题,gcd array 弱化版?? 粘了一发代码发现T了.. 因为gcd array是问区间要带个log</p>
+<p>这个题是单点,于是我就重写了一份就A了…</p>
+<h3 id="day-2"><a href="#day-2" class="headerlink" title="day 2"></a>day 2</h3><p>早上发现B题的题目改掉了,多了一个条件</p>
+<p>之后lyc就发现了神奇的性质,提出了一种做法,之后交上去就A了…</p>
+<p>上午考试,改完了题目就继续做</p>
+<p>然后发现一个题不会做了…</p>
+<p>之后发现E题有人过了,而且是个数据结构题</p>
+<p>就开始研究,ymx提出了一个n*sqrt(n)*log的做法,不过好像巨难写…</p>
+<p>我想了半天对操作分块+后缀自动机暴力的方法,但是发现有一个问题始终解决不了,就是一个树状的字符串集合,log时间查A在B中出现的次数</p>
+<p>最后僵持了很长时间,就写ymx的做法(后缀自动机+trie+分块+主席树),实在是太难写了,我从大概8点半开始写写到了9点半,最后还没写完就打铃回去睡觉了…</p>
+<h3 id="day3"><a href="#day3" class="headerlink" title="day3"></a>day3</h3><p>我激动的跑来机房,接着昨天的写…</p>
+<p>码码码写了大概7,8k终于写完了…</p>
+<p>最后好不容易调过样例交上去WA了,于是和ymx早就写好的暴力开始拍</p>
+<p>最后大概吃完早饭有一会就A掉了这个题,而我发现最后8k的代码只有两个地方出错了…</p>
+<p>可歌可泣…可歌可泣 我代码能力真是越来越强了…..</p>
+<p>之后看过掉A,B,C,E之后发现KPM过了D题</p>
+<p>F题还是只有杜教做了出来…</p>
+<p>而此时我大概是rk14</p>
+<p>前十才有奖金啊,过了D题就有720块奖金了啊!~~</p>
+<p>想!想!想!</p>
+<p>最后决定写一发dp套dp的暴力</p>
+<p>发现状态太复杂了,于是ad发现他之前做过一个类似的状态的压法</p>
+<p>就是nlog求lis的时候有一个g数组g[i]表示长度为i的lis的末尾最小数字是几,之后发现这个数组一定是递增的! 之后就可以二进制表示了..</p>
+<p>写了一发,发现过了17个点,一个25个点… 如果要前3,就要至少过21个点</p>
+<p>之后特判了几个特殊情况,发现过了18个点…</p>
+<p>而ymx认为是meet-in-the-middle,于是他去看了看论文,可是我们死也想不出来dp状态如何快速更新答案</p>
+<p>之后发现陆陆续续有人提交这个题目…</p>
+<p>到中午起床之后发现720块不可能了…</p>
+<p>没关系我们rk5还有480块!!</p>
+<p>继续搞啊!!</p>
+<p>之后过的人越来越多,最后发现我们如果过了只有150块…</p>
+<p>没关系我们可以吃全家桶!!</p>
+<p>最后我们集体决定打一发表???</p>
+<p>因为输入数据只有35个数</p>
+<p>一个一个数骗就好了..</p>
+<p>assert一下看看是不是re就好了</p>
+<p>于是全机房的人一人一个数据的骗</p>
+<p>最后把所有的数据骗到手了</p>
+<p>之后用最裸的暴力开始跑….</p>
+<p>因为dp套dp mle需要开2e左右的long long,机子并跑不了…</p>
+<p>我们估计了一下时间,大概1个小时左右可以跑出了</p>
+<p>之后漫长的旅程就开始了…</p>
+<p>半个小时之后发现ioi已经过了!!!</p>
+<p>woc</p>
+<p>前10无望了,就算过了也是rk11…</p>
+<p>之后ymx十分愤怒给ioi发了一个”真tm悲壮”… 给这个比赛评论了一个”真tm悲壮”</p>
+<p>…. 之后发现jcvb过了F题是rk2??</p>
+<p>是不是出题人不计排名啊…</p>
+<p>ymx问了问管理,发现不计入排名!!</p>
+<p>爽!!!!!!! …</p>
+<p>而此时大家的机子陆陆续续跑出了答案..</p>
+<p>汇总了一下,分数慢慢从0到5分到10分到20到40到80</p>
+<p>等到最后一台机子跑出了答案</p>
+<p>我们已经开心的不能自己了….</p>
+<p>提交了若干次A了!!!!!!!!!!!!!</p>
+<p>全机房沸腾了!!!</p>
+<p>有钱了!!!!!!!!!</p>
+<p>全家桶!!!!!!!!!!!!</p>
+<p>150!!!!!!!!!!!</p>
+<p>之后ad问了一个学军中学的人,发现我们的做法和正解只差一步…</p>
+<p>就是有很多状态不可能再去更新lis,所以,剪枝剪掉就好了…</p>
+<p>我发现把我的改几行就好了…</p>
+<p>然而改了改,确实快了不少</p>
+<p>但是极限数据还是要跑1.8s 然而时间限制1.5s…..</p>
+<p>没关系,反正已经过了嘛….</p>
+<p>…</p>
+<p>之后大家看了看F题认为不可做,认为不可能有第3个人做出来就弃了…</p>
+<p>最后以rk11的姿势挂到了榜上…策爷不算正好是rk10</p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>感觉做比赛好开心啊…..</p>
+<p>比平时闷头刷题有意思多了…</p>
+<p>感觉做完了之后</p>
+<ul>
+<li><p>rp –</p>
+</li>
+<li><p>乱搞能力 ++</p>
+</li>
+<li><p>代码能力 ++</p>
+</li>
+<li><p>骗分能力 ++</p>
+</li>
+</ul>
+<p>但是有些十分巧妙的思路题还是要练习的啊…</p>
+<p>爽啊</p>
+<p>可以去北京吃kfc了!!</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/总结/" rel="tag"># 总结</a>
+          
+            <a href="/tags/比赛/" rel="tag"># 比赛</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/06/07/16-06-thusc/" rel="next" title="THUSC 2016 游记">
+                <i class="fa fa-chevron-left"></i> THUSC 2016 游记
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/07/12/before-noi-summary-02/" rel="prev" title="NOI 前最后的总结">
+                NOI 前最后的总结 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.jpg"
+               alt="stdafx" />
+          <p class="site-author-name" itemprop="name">stdafx</p>
+          <p class="site-description motion-element" itemprop="description">Wave in the golden age.</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">26</span>
+              <span class="site-state-item-name">posts</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-name">categories</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-name">tags</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              Links
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.cnblogs.com/lawyer/p/" title="phx" target="_blank">phx</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.csdn.net/hzoi_ztx" title="ztx" target="_blank">ztx</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://lzy-foenix.gitcafe.io/" title="lzy" target="_blank">lzy</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.cnblogs.com/joyouth/" title="ad" target="_blank">ad</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.csdn.net/qq_34025203?viewmode=contents" title="syx" target="_blank">syx</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.cnblogs.com/assassain/" title="lyc" target="_blank">lyc</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.cnblogs.com/Candyouth/" title="smz" target="_blank">smz</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.csdn.net/lglin000" title="lgl" target="_blank">lgl</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.csdn.net/zzzzzfy" title="zfy" target="_blank">zfy</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#记一次悲壮的骗分比赛"><span class="nav-number">1.</span> <span class="nav-text">记一次悲壮的骗分比赛</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#day-1"><span class="nav-number">1.1.</span> <span class="nav-text">day 1</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#day-2"><span class="nav-number">1.2.</span> <span class="nav-text">day 2</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#day3"><span class="nav-number">1.3.</span> <span class="nav-text">day3</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#总结"><span class="nav-number">1.4.</span> <span class="nav-text">总结</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2015 - 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">stdafx</span>
+</div>
+
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="https://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+	
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+
+</body>
+</html>
